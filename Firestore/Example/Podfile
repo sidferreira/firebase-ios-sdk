@@ -3,18 +3,7 @@ platform :ios, '8.0'
 
 target 'Firestore_Example' do
   pod 'FirebaseCommunity/Core', :path => '../../'
-  pod 'Firestore', :path => '../'
-
-  target 'Firestore_Tests' do
-    inherit! :search_paths
-    pod 'OCMock'
-    pod 'leveldb-library'
-  end
-
-  target 'Firestore_IntegrationTests' do
-    inherit! :search_paths
-    pod 'OCMock'
-  end
+  pod 'Firestore', :path => '../', :testspecs => ['Firestore_Tests', 'Firestore_IntegrationTests']
 end
 
 target 'SwiftBuildTest' do

@@ -42,4 +42,29 @@ Google Cloud Firestore is a NoSQL document database built for automatic scaling,
     'GCC_PREPROCESSOR_DEFINITIONS' => 'GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1 ',
     'OTHER_CFLAGS' => '-DFIRFirestore_VERSION=' + s.version.to_s
   }
+
+  s.test_spec 'Firestore_Tests' do |ts|
+    # Exclude Tests/Integration
+    ts.source_files = [
+      'Example/Tests/API/*.{h,m}',
+      'Example/Tests/Core/*.{h,m}',
+      'Example/Tests/Local/*.{h,m,mm}',
+      'Example/Tests/Model/*.{h,m}',
+      'Example/Tests/Remote/*.{h,m}',
+      'Example/Tests/SpecTests/*.{h,m}',
+      'Example/Tests/Util/*.{h,m}',
+    ]
+
+    ts.dependency 'OCMock'
+    ts.dependency 'leveldb-library'
+  end
+
+  s.test_spec 'Firestore_IntegrationTests' do |ts|
+    ts.source_files = [
+      'Example/Tests/Integration/**/*.{h,m}',
+    ]
+
+    ts.dependency 'OCMock'
+  end
+
 end
