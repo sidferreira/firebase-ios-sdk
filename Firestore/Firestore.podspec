@@ -51,7 +51,7 @@ Google Cloud Firestore is a NoSQL document database built for automatic scaling,
       'Example/Tests/Local/*.{h,m,mm}',
       'Example/Tests/Model/*.{h,m}',
       'Example/Tests/Remote/*.{h,m}',
-      'Example/Tests/SpecTests/*.{h,m}',
+      'Example/Tests/SpecTests/**/*.{h,m,json}',
       'Example/Tests/Util/*.{h,m}',
     ]
 
