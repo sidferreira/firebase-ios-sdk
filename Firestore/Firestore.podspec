@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 Google Cloud Firestore is a NoSQL document database built for automatic scaling, high performance, and ease of application development.
                        DESC
 
-  s.homepage         = 'https://developers.google.com/'
+  s.homepage         = 'https://firebase.google.com/products/firestore/'
   s.license          = { :type => 'Apache', :file => '../LICENSE' }
   s.authors          = 'Google, Inc.'
 
