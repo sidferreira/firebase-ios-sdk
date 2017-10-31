@@ -7,5 +7,5 @@ target 'Firestore_Example' do
 end
 
 target 'SwiftBuildTest' do
-  pod 'Firestore', :path => '../'
+  pod 'Firestore', :path => '../', :testspecs => ['Firestore_Tests', 'Firestore_IntegrationTests']
 end
