@@ -98,8 +98,10 @@ FIR_SWIFT_NAME(WriteBatch)
  * Commits all of the writes in this write batch as a single atomic unit.
  *
  * @param completion A block to be called once all of the writes in the batch have been
- * successfully written to the backend as an atomic unit. This block is not guaranteed
- * to execute if the device remains offline.
+ * successfully written to the backend as an atomic unit. This block will only execute
+ * when the client is online and the commit has completed against the server. The
+ * completion handler will not be called when the device is offline, though local
+ * changes will be visible immediately.
  */
 - (void)commitWithCompletion:(void (^)(NSError *_Nullable error))completion;
 
